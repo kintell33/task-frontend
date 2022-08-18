@@ -9,7 +9,7 @@ export default function TaskCard({ title, id }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.title}>{title}</div>
-      <div>{id}</div>
+      <div className={styles.data}>{id}</div>
     </div>
   );
 }

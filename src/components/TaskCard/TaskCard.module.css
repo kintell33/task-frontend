@@ -2,7 +2,7 @@
     border: 1px solid rgb(73, 73, 73);
     background-color: #fff;
     border-radius: 10px;
-    width: 150px;
+    width: 280px;
     height: 100px;
     display: flex;
     justify-content: flex-start;
@@ -16,4 +16,8 @@
 .title {
     margin-top: 10px;
     font-weight: 600;
+}
+
+.data {
+    text-align: center;
 }

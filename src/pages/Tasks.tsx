@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TaskCard from "../components/TaskCard/TaskCard";
 import useLoading from "../hooks/useLoading";
 import useModal from "../hooks/useModal";
-import { ServiceGetTask } from "../services/TaskService";
+import { CompleteTask, ServiceGetTask } from "../services/TaskService";
 import { TaskType } from "../types/TaskType";
 import styles from "./Tasks.module.css";
 
@@ -34,8 +34,14 @@ export default function Tasks() {
   };
 
   const onCompleteTask = (taskId: string) => {
-    console.log("completed " + taskId);
-    hideModal();
+    showLoading();
+    CompleteTask(taskId)
+      .then((resp) => {
+        if (resp) hideModal();
+      })
+      .finally(() => {
+        hideLoading();
+      });
   };
 
   return (

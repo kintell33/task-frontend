@@ -8,4 +8,11 @@ const ServiceGetTask = (amount?: number): Promise<TaskType[]> => {
   return axios.get(`${APIURL}/tasks${query}`).then((response) => response.data);
 };
 
-export { ServiceGetTask };
+const CompleteTask = (id: string): Promise<boolean> => {
+  return axios
+    .put(`${APIURL}/tasks/${id}`)
+    .then((_) => true)
+    .catch((_) => false);
+};
+
+export { ServiceGetTask, CompleteTask };

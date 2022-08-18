@@ -20,7 +20,6 @@ export default function useModal() {
   };
 
   const hideModal = () => {
-    console.log('hiding modal!');
     let modal = contextData?.appData.modal;
     modal.show = false;
     contextData?.setAppData({ ...contextData?.appData, modal });

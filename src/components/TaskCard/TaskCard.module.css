@@ -1,0 +1,19 @@
+.container {
+    border: 1px solid rgb(73, 73, 73);
+    background-color: #fff;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+    cursor: pointer;
+    margin:5px;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: 600;
+}
